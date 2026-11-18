@@ -1,5 +1,7 @@
+-- Connect to the database
 \c :DBNAME
 
+-- Specify host_info table
 CREATE TABLE IF NOT EXISTS PUBLIC.host_info
 (
     id               SERIAL NOT NULL,
@@ -15,6 +17,7 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_info
     CONSTRAINT host_info_un UNIQUE (hostname)
 );
 
+-- Specify host_usage table
 CREATE TABLE IF NOT EXISTS PUBLIC.host_usage
 (
     "timestamp"    TIMESTAMP NOT NULL,
